@@ -62,7 +62,7 @@ html, body {
 .opening-details p {
     font-size: 1.4rem;
     color: #333;
-    margin: 5px 0; /* Space between each line */
+    margin: 0; /* Removes default margins */
 }
 
 /* Bio Details */
