@@ -54,6 +54,15 @@ html, body {
 
 /* Left Column */
 /* ------------ */
+/* Bio Details */
+.bio {
+    font-size: 1rem;
+    color: #333;
+    font-family: "Happy Monkey", system-ui;
+    letter-spacing: 0.5px;
+    text-align: justify;
+}
+
 /* Opening Details */
 .opening-details {
     margin-bottom: 40px;
@@ -63,15 +72,6 @@ html, body {
     font-size: 1.4rem;
     color: #333;
     margin: 0; /* Removes default margins */
-}
-
-/* Bio Details */
-.bio {
-    font-size: 1rem;
-    color: #333;
-    font-family: "Happy Monkey", system-ui;
-    letter-spacing: 0.5px;
-    text-align: justify;
 }
 
 /* Right Column: Main Logo */
