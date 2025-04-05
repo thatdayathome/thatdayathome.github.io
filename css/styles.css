@@ -86,14 +86,16 @@ html, body {
 }
 
 /* Right Column: Main Logo */
-.section-2 img {
-    max-width: 100%;
-    height: 95%;
-    mix-blend-mode: multiply;
-    filter: contrast(1);
+.section-2 {
     display: flex;
     align-items: center;     /* vertical centering */
     justify-content: center; /* optional: horizontal centering */
+    height: auto;
+}
+.section-2 img {
+    max-width: 350px;
+    mix-blend-mode: multiply;
+    filter: contrast(1);
 }
 
 
@@ -228,7 +230,7 @@ html, body {
 .slogan p {
     color: #000;
     font-size: 1.2rem;
-    margin: 5px 0;
+    margin: 0;
 }
 
 /* Last section: Slogan & Instagram */
