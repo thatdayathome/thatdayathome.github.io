@@ -1,23 +1,19 @@
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 html, body {
-    padding: 0;
-    margin: 0;
     font-family: "Bangers", system-ui;
-    letter-spacing: 1.5px;
+    max-width: 100%;
+    min-height: 100%;
+    background-color: #d9b596;
 }
 
 /* Google Fonts */
 .bangers-regular {
     font-family: "Bangers", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.happy-monkey-regular {
-    font-family: "Happy Monkey", system-ui;
     font-weight: 400;
     font-style: normal;
 }
@@ -28,8 +24,8 @@ html, body {
     grid-template-rows: auto auto auto; /* 3 rows */
     gap: 20px; /* Space between rows */
     min-height: 100vh; /* Full height of the viewport */
-    background-color: #d9b596;
-    padding: 48px;
+    padding: 16px 60px;
+    max-width: 100%;
 }
 
 /* Style for each section */
@@ -47,9 +43,9 @@ html, body {
 .row-1 {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 40px;
-    width: 80%; /* 80% of the container width */
+    gap: 80px;
     margin: 0 auto;
+    width: 100%;
 }
 
 /* Left Column */
@@ -58,11 +54,11 @@ html, body {
 .bio p {
     font-size: 1rem;
     color: #333;
-    font-family: "Happy Monkey", system-ui;
+    font-family: "Quicksand", sans-serif;
     letter-spacing: 0.5px;
     text-align: justify;
     text-transform: uppercase;
-    line-height: 20px;
+    line-height: 1.6;
 }
 
 /* Opening Details */
@@ -70,7 +66,7 @@ html, body {
     margin-bottom: 20px;
 }
 
-.opening-details p {
+.opening-details p, .launch-date p {
     font-size: 1.4rem;
     color: #333;
     margin: 0; /* Removes default margins */
@@ -83,10 +79,7 @@ html, body {
 }
 
 .launch-date p {
-    font-size: 1.4rem;
     color: #bf3131;
-    margin: 0;
-    letter-spacing: 2px;
 }
 
 /* Right Column: Main Logo */
@@ -110,29 +103,33 @@ html, body {
 /* SECOND ROW WITH TWO COLUMNS AND A VERTICAL DIVIDER */
 .row-2 {
     background-color: #feeac9; /* Light beige */
-    padding: 40px 60px;
-    width: 80%; /* 80% of the container width */
+    padding: 40px 50px;
+    width: 100%;
     margin: 0 auto; /* Center the row horizontally */
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 84px;
+    gap: 100px;
     position: relative; /* To place the divider */
     color: #bf3131;
     height: auto;
 }
 
+.left-column, .right-column {
+    width: 100%;
+}
+
 /* Vertical divider between columns */
 .divider {
     position: absolute;
-    top: 30px; /* Small space from the top */
-    bottom: 30px; /* Small space from the bottom */
+    top: 40px; /* Small space from the top */
+    bottom: 40px; /* Small space from the bottom */
     left: 50%;
     width: 1px;
     background-color: #bf3131;
 }
 
 .row-2 h2 {
-    font-size: 50px;
+    font-size: 3rem;
     letter-spacing: 4.5px;
     margin: 25px 0;
 }
@@ -141,16 +138,16 @@ html, body {
     display: grid;
     grid-template-columns: 1fr auto; /* One column for the item and one for the price */
     padding: 2px 0;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
-.coffee-section, .matcha-section, .food-section {
+.coffee-title, .matcha-title, .food-title {
     display: flex;
     align-items: center;
 }
 
 .coffee-image, .matcha-image, .paperbag-image {
-    width: 88px;
+    max-width: 88px;
     height: auto;
     mix-blend-mode: multiply;
     filter: contrast(1);
@@ -177,7 +174,8 @@ html, body {
 }
 
 .menu-item, .menu-price, .food-menu p {
-    font-family: "Happy Monkey", system-ui;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
     letter-spacing: 0.5px;
     margin: 0;
     text-transform: uppercase;
@@ -202,7 +200,7 @@ html, body {
 }
 
 .row-3 h3 {
-    font-size: 40px;
+    font-size: 2rem;
     margin: 25px auto;
 }
 
@@ -213,7 +211,7 @@ html, body {
 }
   
 .image-container img {
-    width: 150px; /* Adjust image width as necessary */
+    width: 120px; /* Adjust image width as necessary */
     height: auto; /* Keeps image aspect ratio */
 }
 
@@ -236,6 +234,7 @@ html, body {
     color: #000;
     font-size: 1.2rem;
     margin: 0;
+    letter-spacing: 2.5px;
 }
 
 /* Last section: Slogan & Instagram */
@@ -262,7 +261,161 @@ i.fa-instagram {
   }
 
 .instagram p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin: 0; /* Remove margin around the text */
-    font-weight: bold;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+
+    .section-2 img {
+        width: 250px;
+    }
+
+    .row-1 {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .row-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;  /* Two equal columns */
+        gap: 80px;  /* Adjust the gap between the columns so that it's align with the paddings */
+        width: 100%;
+        padding: 40px;
+    }
+
+    .row-2 h2 {
+        font-size: 2rem;
+    }
+
+    .section-1, .section-2 {
+        max-width: 100%;
+    }
+    
+    .bio p {
+        font-size: 0.7em; /* Reduced font size for tablet */
+        line-height: 1.5;
+        text-align: justify;
+        text-align-last: center;
+    }
+
+    .opening-details p, .launch-date p {
+        font-size: 1em; /* Reduced font size for tablet */
+        text-align: center;
+    }
+
+    .section-2 {
+        order: -1; /* Move the logo to the top */
+    }
+
+    .coffee-image, .matcha-image, .paperbag-image {
+        width: 60px;
+    }
+
+    .row-3 h3 {
+        font-size: 28px;
+    }
+
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom-content {
+        font-size: 0.9rem;
+    }
+}
+
+/* @media screen and (min-width: 321px) and (max-width: 573px) {
+    .container {
+      padding: 1rem;
+      flex-direction: column;
+    }
+} */
+
+@media (max-width: 320px) {
+    .container {
+        padding: 30px 10px;
+        gap: 16px;
+    }
+
+    .row-1, .row-2 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .bio p {
+        font-size: 0.5em;
+        text-align: justify;
+        text-align-last: center;
+    }
+
+    .opening-details p, .launch-date p {
+        font-size: 0.8em; /* Reduced font size for mobile */
+        line-height: 1.2;
+    }
+
+    .section-1, .section-2 {
+        width: 100%;
+    }
+
+    .section-2 {
+        order: -1; /* This will move the logo to the top */
+    }
+
+    .section-2 img {
+        max-width: 200px; /* Smaller logo */
+    }
+
+    .row-2 h2 {
+        font-size: 30px; /* Smaller menu titles */
+    }
+
+    .menu-section, .food-menu p {
+        font-size: 14px; /* Smaller font size for menu items */
+        text-align: justify;
+    }
+
+    .coffee-image, .matcha-image, .paperbag-image {
+        max-width: 60px; /* Smaller images */
+        height: auto;
+    }
+
+    .divider {
+        width: 0;
+    }
+
+    .row-3 h3 {
+        font-size: 24px; /* Adjusted header size */
+        margin: 20px auto;
+    }
+
+    .image-container img {
+        width: 100px; /* Smaller QR and payment image */
+    }
+
+    .bottom-content {
+        font-size: 0.9rem; /* Adjusted font size */
+    }
+
+    .payment-image {
+        display: none;
+    }
+
+    .slogan p {
+        font-size: 0.9rem; /* Smaller slogan text */
+    }
+
+    .instagram p {
+        font-size: 1rem; /* Smaller Instagram text */
+    }
 }
